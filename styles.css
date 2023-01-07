@@ -23,6 +23,7 @@
 #new-task-input{
     max-width:150px;
 }
+
 .task{
     /* display: flex;
     justify-content: space-around;
@@ -30,7 +31,7 @@
     background: rgb(158, 83, 83);
 }
 .text{
-    width: 340px;
+    min-width: 30px;
 }
 .wrapper{
     z-index: 4;
@@ -98,6 +99,7 @@ width: 200px;
 }
 .show-poup-task{
     margin-top: 5px;
+    margin-bottom: 5px;
     z-index: 2;
     /* margin-top: 50px; */
     border: 3px solid black;
@@ -113,6 +115,7 @@ width: 200px;
 }
 .popup-task{
     margin-top: 5px;
+    margin-bottom: 5px;
     z-index: 2;
     /* margin-top: 50px; */
     border: 3px solid black;
@@ -135,4 +138,15 @@ width: 200px;
 }
 .hideDiv{
     display: none;
+}
+.edit-btn{
+    background-color: yellowgreen;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.remove-btn{
+      background-color: red;
+      border: 1px solid black;
+      border-radius: 5px; 
+        margin-left: 10px;
 }

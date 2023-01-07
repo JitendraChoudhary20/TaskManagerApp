@@ -31,8 +31,8 @@ const new_task_btn = document.querySelector(".taskbtn");
 		// task_el.setAttribute('class', 'show-popup-');        
 	};
 
-	let count = 0;
 
+	let count = 1;
 
     add.addEventListener('click',()=>{
         if(title.value=="" || discription_content.value==''){
@@ -188,12 +188,12 @@ const new_task_btn = document.querySelector(".taskbtn");
 		task_actions_el.classList.add('actions');
 		
 		const task_edit_el = document.createElement('button');
-		task_edit_el.classList.add('edit');
+		task_edit_el.classList.add('edit-btn');
 		task_edit_el.innerText = 'Edit';
 
 		const task_delete_el = document.createElement('button');
-		task_delete_el.classList.add('delete');
-		task_delete_el.innerText = 'X';
+		task_delete_el.classList.add('remove-btn');
+		task_delete_el.innerText = 'Remove';
 
 		task_actions_el.appendChild(task_edit_el);
 		task_actions_el.appendChild(task_delete_el);
