@@ -97,6 +97,7 @@ width: 200px;
 
 }
 .show-poup-task{
+    margin-top: 5px;
     z-index: 2;
     /* margin-top: 50px; */
     border: 3px solid black;
@@ -107,10 +108,11 @@ width: 200px;
     position: absolute;
     transform: translateX(300px);
     /* transform: translateY(100px); */
-    left: calc(50%-200px);
+    /* left: calc(50%-200px); */
     background: rgb(44, 157, 134);
 }
 .popup-task{
+    margin-top: 5px;
     z-index: 2;
     /* margin-top: 50px; */
     border: 3px solid black;
@@ -121,6 +123,16 @@ width: 200px;
     position: absolute;
     transform: translateX(300px);
     /* transform: translateY(100px); */
-    left: calc(50%-200px);
+    /* left: calc(50%-200px); */
     background: rgb(38, 165, 87);
+}
+.btn-del-div{
+    color: white;
+    background-color: red;
+    min-width: 50px;
+    height: 30px;
+    border-radius: 20%;
+}
+.hideDiv{
+    display: none;
 }

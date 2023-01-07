@@ -19,13 +19,16 @@ const new_task_btn = document.querySelector(".taskbtn");
         
 	});
 
+	function deleteOuterDiv(){
+		document.getElementById("outertask").classList.add('hideDiv');
+	}
+
 
 	function renderData(id) {
 		
 	document.getElementById(id).classList.toggle('popup-task');
 
-		// task_el.setAttribute('class', 'show-popup-');
-        
+		// task_el.setAttribute('class', 'show-popup-');        
 	};
 
 	let count = 0;
@@ -46,15 +49,26 @@ const new_task_btn = document.querySelector(".taskbtn");
 		outerdiv.setAttribute('draggable','true');
         outerdiv.setAttribute('ondragstart','drag(event)');
 		outerdiv.setAttribute('ondblclick',`renderData(${1})`);
+
 		const ptag = document.createElement('p');
 		ptag.setAttribute('id','ptask');
-
 		ptag.innerHTML=task;
+
 		const ptag2 = document.createElement('p');
 		ptag2.setAttribute('id','pdiscription');
 		ptag2.innerHTML = discription_value;
+
+		const delouterbtn = document.createElement('button');
+		delouterbtn.setAttribute('id','delouterdiv');
+		delouterbtn.classList.add("btn-del-div");
+		delouterbtn.innerHTML='Delete';
+		delouterbtn.setAttribute('onclick','deleteOuterDiv()');
+
 		outerdiv.appendChild(ptag);
 		outerdiv.appendChild(ptag2);
+		outerdiv.appendChild(delouterbtn);
+
+
 
 		
 		
@@ -153,7 +167,7 @@ const new_task_btn = document.querySelector(".taskbtn");
 				// if(statusobj.value === 'completed'){
 				// 	selectStatus.value = 'completed';
 				// }
-				selectStatus.disabled = 'true';
+				// selectStatus.disabled = 'true';
 		
 				statusComponent.appendChild(statuslabel);
 				statusComponent.appendChild(selectStatus);
