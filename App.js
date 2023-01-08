@@ -20,7 +20,7 @@ const new_task_btn = document.querySelector(".taskbtn");
 	});
 
 	function deleteOuterDiv(){
-		document.getElementById("outertask").classList.add('hideDiv');
+		document.getElementById(`task${count}`).classList.add('hideDiv');
 	}
 
 
@@ -28,7 +28,7 @@ const new_task_btn = document.querySelector(".taskbtn");
 		
 	document.getElementById(id).classList.toggle('popup-task');
 
-		// task_el.setAttribute('class', 'show-popup-');        
+
 	};
 
 
@@ -44,11 +44,11 @@ const new_task_btn = document.querySelector(".taskbtn");
         const discription_value = discription_content.value;
 
 		const outerdiv = document.createElement('div');
-		outerdiv.setAttribute('id','outertask');
+		outerdiv.setAttribute('id',`task${count}`);
 		outerdiv.classList.add('task');
 		outerdiv.setAttribute('draggable','true');
         outerdiv.setAttribute('ondragstart','drag(event)');
-		outerdiv.setAttribute('ondblclick',`renderData(${1})`);
+		outerdiv.setAttribute('ondblclick',`renderData(${count})`);
 
 		const ptag = document.createElement('p');
 		ptag.setAttribute('id','ptask');
@@ -75,7 +75,7 @@ const new_task_btn = document.querySelector(".taskbtn");
 
 		const task_el = document.createElement('div');
 		task_el.classList.add('popup-task','show-popup-task');
-		task_el.setAttribute("id","1");
+		task_el.setAttribute("id","count");
 		
         // task_el.setAttribute('ondrag','drag(event)');
 
